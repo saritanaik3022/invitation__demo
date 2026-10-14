@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import countflowerleft from '../assets/countflowerleft.svg';
 import countflowerright from '../assets/countflowerright.svg';
 
-export default function Countdown({ targetDate = "2026-10-31T11:00:00" }) {
+export default function Countdown({ targetDate = "2026-10-29T11:58:00" }) {
   const calculateTimeLeft = () => {
     const target = new Date(targetDate).getTime();
     const now = new Date().getTime();

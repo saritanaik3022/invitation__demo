@@ -6,7 +6,7 @@ import bottomright from '../assets/bottomright.svg';
 import herocouple from '../assets/herocouple.webp';
 
 export default function Hero({ data, onOpenMaps }) {
-  const mapLink = "https://maps.google.com/?q=Hall+Complex+1st+B+Cross+Road+7th+Block+Koramangala+Bengaluru";
+  const mapLink = "https://www.google.com/maps/search/?api=1&query=Shri+Venkataramana+Temple,+Balegadde,+Honnavar,+Uttara+Kannada,+Karnataka,+India";
 
   return (
     <section id="eng007-hero-section">
@@ -32,19 +32,22 @@ export default function Hero({ data, onOpenMaps }) {
             <div className="eng007-hero-save-block">
               <p className="eng007-text-accent">Save the date</p>
               <div className="eng007-names">
-                <span>{data?.bride_name || "Ananya Sharma"}</span>
+                <span>{data?.bride_name || "Anita D.N"}</span>
                 <span>&</span>
-                <span>{data?.groom_name || "Aarav Verma"}</span>
+                <span>{data?.groom_name || "Ravi V.N"}</span>
               </div>
             </div>
 
             <div className="eng007-hero-engaged-block">
-              <p className="eng007-text-accent">are getting engaged on</p>
-              <p className="eng007-date">Saturday | 31st Oct | 2026</p>
+              <p className="eng007-text-accent">are getting married on</p>
+              <p className="eng007-date">Thursday | 29th Oct | 2026</p>
             </div>
 
             <div className="eng007-hero-venue-block">
-              <p className="eng007-venue-name">{data?.venue_name || "Hall Complex"}</p>
+              <p className="eng007-venue-name">{data?.venue_name || "Shri Venkataramana Temple, Balegadde"}</p>
+              <p style={{ fontFamily: 'Lora, serif', color: '#697358', fontSize: '1.4rem', margin: '-1rem 0 0' }}>
+                Honnavar, Uttara Kannada, Karnataka
+              </p>
               <button 
                 type="button" 
                 className="eng007-maps-btn"
@@ -56,7 +59,7 @@ export default function Hero({ data, onOpenMaps }) {
           </div>
 
           <div className="eng007-hero-right">
-            <img src={herocouple} alt="Ananya and Aarav" />
+            <img src={herocouple} alt="Anita and Ravi" />
           </div>
         </div>
       </div>

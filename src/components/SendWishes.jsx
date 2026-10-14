@@ -66,7 +66,7 @@ export default function SendWishes() {
                 {submitted ? (
                   <div className="sendwishes-success-msg">
                     <p style={{ fontFamily: 'Lora, serif', color: '#697358', fontSize: '1.4rem', textAlign: 'center', margin: '2rem 0' }}>
-                      ✨ Thank you for sending your warm blessings to Ananya & Aarav!
+                      ✨ Thank you for sending your warm blessings to Anita &amp; Ravi!
                     </p>
                   </div>
                 ) : (

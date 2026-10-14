@@ -5,37 +5,26 @@ import wishestop from '../assets/wishestop.svg';
 import wishesbottom from '../assets/wishesbottom.svg';
 import quotes from '../assets/quotes.svg';
 import wishesflower from '../assets/wishesflower.svg';
+import wishesCouple from '../assets/wishes_couple.png';
 
-const initialWishes = [
-  {
-    id: 1,
-    message: "Congratulations on your engagement! May this lovely chapter be filled with love, laughter, unforgettable moments, and beautiful dreams. Wishing you both a lifetime of happiness and togetherness ahead.",
-    authorName: "Adithya"
-  },
-  {
-    id: 2,
-    message: "May your engagement be the start of a beautiful journey where love grows deeper, laughter becomes sweeter, and each shared dream brings you ever closer. Wishing you endless happiness and joy together.",
-    authorName: "Manya"
-  },
-  {
-    id: 3,
-    message: "May your engagement mark the beginning of a lifetime filled with love, joy, and unforgettable moments together.",
-    authorName: "Mahesh"
-  }
+const weddingBlessings = [
+  "May your journey together be filled with endless love, happiness, and beautiful memories.",
+  "Wishing you both a lifetime of love, laughter, and joy as you embark on this wonderful new chapter together.",
+  "May each day of your married life bring deeper companionship, warm smiles, and everlasting happiness."
 ];
 
 export default function Wishes() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrevious = () => {
-    setCurrentIndex((prev) => (prev === 0 ? initialWishes.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? weddingBlessings.length - 1 : prev - 1));
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev === initialWishes.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev === weddingBlessings.length - 1 ? 0 : prev + 1));
   };
 
-  const currentWish = initialWishes[currentIndex];
+  const currentBlessing = weddingBlessings[currentIndex];
 
   return (
     <section id="eng007-wishes-section" style={{ overflow: 'hidden' }}>
@@ -51,10 +40,18 @@ export default function Wishes() {
             <h2 className="eng007-wishes-title">Wishes For The Couple</h2>
           </div>
 
+          {/* Centered Couple Photo/Illustration */}
+          <div className="eng007-wishes-couple-frame">
+            <img 
+              src={wishesCouple} 
+              alt="Anita & Ravi" 
+              className="eng007-wishes-couple-img" 
+            />
+          </div>
+
           <div className="eng007-wishes-shared-wrapper">
             <div className="eng007-wishes-container-message-wrapper">
-              <p className="eng007-wishes-message">{currentWish.message}</p>
-              <p className="eng007-wishes-author">— {currentWish.authorName}</p>
+              <p className="eng007-wishes-message">“{currentBlessing}”</p>
             </div>
 
             <div className="eng007-wishes-dots">
@@ -62,16 +59,16 @@ export default function Wishes() {
                 type="button" 
                 className="eng007-change-btn" 
                 onClick={handlePrevious}
-                aria-label="Previous wish"
+                aria-label="Previous blessing"
               >
                 &larr;
               </button>
-              <span>{currentIndex + 1} / {initialWishes.length}</span>
+              <span>{currentIndex + 1} / {weddingBlessings.length}</span>
               <button 
                 type="button" 
                 className="eng007-change-btn" 
                 onClick={handleNext}
-                aria-label="Next wish"
+                aria-label="Next blessing"
               >
                 &rarr;
               </button>

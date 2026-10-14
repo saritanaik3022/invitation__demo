@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="nimbus-container">
         <div className="eng007-footer-content">
           <p className="eng007-footer-brand-title">
-            Engagement Invitation website by <span className="eng007-footer-brand-highlight">INVITATION NATION</span>
+            Wedding Invitation website by <span className="eng007-footer-brand-highlight">INVITATION NATION</span>
           </p>
 
           <div className="eng007-footer-logo-wrapper">
